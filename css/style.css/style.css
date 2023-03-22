@@ -4,7 +4,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     /* animation: all 1 ease-in-out; */
-    transition: all 1s ease-in-out;
+    /* transition: all 1s ease-in-out; */
 }
 
 #mainTitle {
@@ -39,10 +39,16 @@ body {
     z-index: 1000;
 }
 
-#tilemap
-
 #mainCharacter{
     top: 160px;
     left: 392px;
     transition: all 1s ease-in-out;
+}
+
+#door1{
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: white;
 }
