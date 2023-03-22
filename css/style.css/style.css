@@ -3,7 +3,8 @@ body {
     color: white;
     display: grid;
     grid-template-columns: auto auto auto;
-    animation: all 1 ease-in-out;
+    /* animation: all 1 ease-in-out; */
+    transition: all 1s ease-in-out;
 }
 
 #mainTitle {
@@ -38,11 +39,10 @@ body {
     z-index: 1000;
 }
 
-#tilemap{
-
-}
+#tilemap
 
 #mainCharacter{
     top: 160px;
     left: 392px;
+    transition: all 1s ease-in-out;
 }
