@@ -1,11 +1,10 @@
 document.getElementById("mainTitle").innerText = "Point and Click Adventure";
-document.getElementById("mainTitle").style.textAlign = "center";
 
 const offsetCharacter = 16;
 
 const mainCharacter = document.getElementById("mainCharacter");
 const gameWindow = document.getElementById("gameWindow");
-
+const mainCharacterSpeech = document.getElementById("mainCharacterSpeech")
 
 gameWindow.onclick =  function(e){
     var rect = gameWindow.getBoundingClientRect();
@@ -14,23 +13,40 @@ gameWindow.onclick =  function(e){
     mainCharacter.style.left = x + "px";
     mainCharacter.style.top = y + "px";
 
-    console.log(e.target.id);
+    //console.log(e.target.id);
+    showSpeech("Does this work?");
 
     switch(e.target.id){
         case "door1":
             //something insert here
-            console.log("this is door1 and it is locked");
+            characterAudio.play();
+            showSpeech("This is door1 and it is locked");
             break;
         case "door2":
             //something insert here
-            console.log("Nobody is home... Come back later...");
+            showSpeech("Nobody is home... Come back later...");
+            break;
+            case "Tree":
+            //something insert here
+            showSpeech("This is a tree....... it has an lock (stairs in it) on it?");
             break;
         default:
             // do something when it doest have a case
-            console.log("Nothing worth is clicked");
+            showSpeech("Nothing worth is clicked");
             break;
     }
+
     //console.log(x);
 
     //put in css on main character "Transition: all us ease-in-out;
+
+    function showSpeech(dialog){
+        mainCharacterSpeech.style.opacity = 1;
+        mainCharacterSpeech.innerHTML = dialog;
+        
+    }
+    function hideSpeech(){
+        mainCharacterSpeech.style.opacity = 0;
+        mainCharacterSpeech.innerHTML = "...";
+    }
 }

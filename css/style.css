@@ -1,0 +1,116 @@
+body {
+    background-color: #000;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* animation: all 1 ease-in-out; */
+}
+
+#mainTitle {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+#gameWindow {
+    position: relative;
+    width: 982px;
+    height: 743px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: blue;
+}
+
+#inventoryBox{
+    height: 180px;
+    width: 80px;
+    background-color: #000;
+    border: #FFF 1px solid;
+    top: 0px;
+    left: 0px;
+}
+
+.background {
+    position: absolute;
+    z-index: 0;
+
+}
+
+.character{
+    position: absolute;
+    z-index: 100;
+}
+
+.foreground{
+    position: absolute;
+    z-index: 1000;
+}
+
+
+#mainCharacter {
+    top: 160px;
+    left: 392px;
+    transition: all 1s ease-in-out;
+}
+
+#hatch{
+    top: 472px;
+    left: 648px;
+    width: 32px;
+    height: 32px;
+    
+}
+.speech-bubble {
+	background: #0dbd00;
+	border-radius: .4em;
+    transition: all 1s ease-in-out; 
+}
+#tilemap{
+    top: 10px;
+    left: 1px;
+    width: 10px;
+    height: 12px;
+}
+
+
+#dialogBar{
+    height: 64px;
+    width: 982px;
+    Bottom: 0px;
+}
+
+#setMainDialog{
+    position: relative;
+}
+
+.brownBar{
+    height: 32px;
+}
+
+#mainCharacterSpeech{
+    top: 0px;
+    left:40px;
+    width: 250px;
+}
+
+#counterSpeech{
+    top:0px;
+    right:40px;
+    width: 250px    ;
+}
+
+#counterCharacter{
+    top: 0px;
+    right: 0px;
+}
+#wizard{
+    top:240px;
+    left:600px;
+    height: 32px;
+    width: 32px;
+}
+
+#tree{
+    top:400px;
+    left:300px;
+}
